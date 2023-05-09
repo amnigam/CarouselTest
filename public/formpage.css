@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background-color: rgb(239, 243, 232);
+}
+
+.question {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(231, 231, 247);
+}
+
+.response {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(148, 148, 161);
+}
+
+ul {
+    margin: 5px;
+    padding: 0px;
+}
+
+.activities {
+    margin: 15px;
+    border-top: solid rgb(86, 139, 5);
+    padding-top: 10px;
+}
+
+.container {
+    border: solid; 
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(163, 163, 247);
+    /* display: none; */
+}
+
+.card[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.selected {
+    display:block;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 110%;
+    margin: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+  }
+  
+  .carousel-button:focus {
+    outline: 1px solid black;
+  }
+  
+  .carousel-button.prev {
+    left: 1rem;
+  }
+  
+  .carousel-button.next {
+    right: 1rem;
+  }

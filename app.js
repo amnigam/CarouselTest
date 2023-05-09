@@ -1,0 +1,27 @@
+const express = require('express'); 
+const path = require('path');
+const x = require('./utils/formData'); 
+
+const app = express();
+app.set('view engine', 'pug'); 
+app.use(express.urlencoded( { extended: true } ) ); 
+app.use(express.static(path.join(__dirname, 'public'))); 
+
+app.get('/', (req,res) => {
+    res.render('index', { name: "Chappandi"}); 
+}); 
+
+console.log(x.data[0].activities); 
+// console.log(x);
+
+app.get('/formdata', (req, res) => {
+    // res.send(x); 
+    const page = x.data     // x.data is the array of Objects. 
+    res.render('form', {
+            // questions: page[0].question,
+            obj: page
+
+        });
+})
+
+module.exports = app;
