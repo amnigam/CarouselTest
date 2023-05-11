@@ -6,9 +6,9 @@ html
         script(src='formJS.js' defer)
     head 
     body 
+        button(class='carousel-button prev' data-carousel-button="prev" onclick="plusCards(-1)" ) &#8656 
+        button(class='carousel-button next' data-carousel-button="next" onclick="plusCards(1)") &#8658
         form(id='form' method='GET' action='/formdata')
-            button(class='carousel-button prev' data-carousel-button="prev" ) &#8656 
-            button(class='carousel-button next' data-carousel-button="next") &#8658
             each i, index in obj
                 - let a = i.question 
                 - let b = i.activities
@@ -27,5 +27,5 @@ html
                                 |Associated Activities for Object #{index+1}
                                 each act in b 
                                     ul=act 
-            button(type="reset", name="reset") Reset
-            button(type="submit", name="submit") Submit
+            button(class="form-reset", type="reset", name="reset") Reset
+            button(class="form-submit", type="submit", name="submit", disabled) Submit

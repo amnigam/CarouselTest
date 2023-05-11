@@ -1,0 +1,31 @@
+//- doctype html 
+//- html 
+//-     head
+//-         title Form Data Page
+//-         link(rel="stylesheet" href="/formpage.css")
+//-         script(src='formJS.js' defer)
+//-     head 
+//-     body 
+//-         form(id='form' method='GET' action='/formdata')
+//-             button(class='carousel-button prev' data-carousel-button="prev" onclick="plusCards(-1)" ) &#8656 
+//-             button(class='carousel-button next' data-carousel-button="next" onclick="plusCards(1)") &#8658
+//-             each i, index in obj
+//-                 - let a = i.question 
+//-                 - let b = i.activities
+//-                 div(class='container' data-carousel) 
+//-                     div(class='card' data-index=index)
+//-                         p.heading Object No. #{index+1}
+//-                         div.question 
+//-                             each ques, qindex in a 
+//-                                 ul= ques
+//-                                 div.response
+//-                                     label.ques(for='yes'+qindex) Yes
+//-                                     input.ques(type="radio", name="response"+index+qindex , id="yes"+qindex , value="yes")
+//-                                     label.ques(for="no"+qindex) No 
+//-                                     input.ques(type="radio", name="response"+index+qindex , id="no"+qindex , value="no")
+//-                             .activities 
+//-                                 |Associated Activities for Object #{index+1}
+//-                                 each act in b 
+//-                                     ul=act 
+//-             button(type="reset", name="reset") Reset
+//-             button(type="submit", name="submit") Submit

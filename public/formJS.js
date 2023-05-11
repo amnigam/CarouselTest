@@ -1,21 +1,48 @@
-const cards = document.querySelectorAll("[data-index]");
-const buttons = document.querySelectorAll("[data-carousel-button]");
-let startIndex = 0;
+let cardIndex=1;
+showCards(cardIndex); 
 
-cards[0].dataset.active = '';
+    // Tackling previous & next button functionality
+function plusCards(n) {
+    showCards(cardIndex += n); 
+}; 
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const offset = button.dataset.carouselButton === 'next' ? 1 : -1; 
-        // const activeCard = cards.querySelector("[data-active]"); 
-        const activeCard = document.querySelector("[data-active]"); 
-        let newIndex = [...cards.children].indexOf(activeCard) + offset; 
-        if (newIndex < 0) newIndex = cards.children.length - 1; 
-        if (newIndex >= cards.children.length) newIndex = 0; 
+function showCards(n) {
+    let i;
+    let cards = document.getElementsByClassName("card"); 
+    const formSubmit = document.querySelector(".form-submit"); 
 
-        cards.children[newIndex].dataset.active = true;
-        delete activeCard.dataset.active; 
-    });
-});
+    if (n > cards.length) {
+        cardIndex = 1; 
+    };
+    if (n < 1) {
+        cardIndex = cards.length; 
+    }; 
+    for (i=0; i<cards.length; i++) {
+        cards[i].style.display = 'none'; 
+    }; 
 
+    cards[cardIndex-1].style.display = 'block';
+    if (cardIndex == cards.length) {
+        formSubmit.removeAttribute('disabled'); 
+    };
+}
 
+// Watching for Events - Debugging Helpers!
+document.addEventListener('DOMContentLoaded', e => {
+    console.log('DOM Content Loaded Event fired'); 
+})
+document.addEventListener('load', e => {
+    console.log('Load fired'); 
+})
+document.addEventListener('beforeunload', e => {
+    console.log('Before Unload Event fired'); 
+})
+window.addEventListener('load', e => {
+    console.log('Window Load fired'); 
+})
+window.addEventListener('beforeunload', e => {
+    console.log('Before Window Unload Event fired'); 
+})
+window.addEventListener('unload', e => {
+    console.log('Window Unload Event fired'); 
+})

@@ -27,21 +27,22 @@ ul {
 }
 
 .container {
-    border: solid; 
+    /* border: solid;  */
     text-align: center;
     margin: 10px;
     background-color: rgb(163, 163, 247);
-    /* display: none; */
 }
 
-.card[data-active] {
+/* .card[data-active] {
     opacity: 1;
     z-index: 1;
     transition-delay: 0ms;
-}
-
-.selected {
     display:block;
+} */
+
+.card {
+    display:none;
+    border: solid;
 }
 
 .heading {
@@ -56,12 +57,12 @@ ul {
     z-index: 2;
     background: none;
     border: none;
-    font-size: 4rem;
-    top: 50%;
+    font-size: 2rem;
+    top: 5%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
-    border-radius: .25rem;
+    border-radius: .20rem;
     padding: 0 .5rem;
     background-color: rgba(0, 0, 0, .1);
   }
@@ -82,4 +83,40 @@ ul {
   
   .carousel-button.next {
     right: 1rem;
+  }
+
+  .form-reset {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5 rem;
+    border: solid black;
+    position: absolute;
+    top: 60%;
+    left: 36%;
+    background-color: orangered;
+    cursor: pointer;
+  }
+
+  .form-reset:hover,
+  .form-reset:focus {
+    color: lightcoral;
+    background-color: rgb(9, 9, 100);
+  }
+
+  .form-submit {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5 rem;
+    border: solid black;
+    position: absolute;
+    top: 60%;
+    left: 47%;
+    background-color: rgb(8, 160, 54);
+    cursor: pointer;
+  }
+
+  .form-reset:hover,
+  .form-reset:focus {
+    color: rgb(11, 240, 145);
+    background-color: rgb(9, 9, 100);
   }
