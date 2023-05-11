@@ -115,8 +115,8 @@ ul {
     cursor: pointer;
   }
 
-  .form-reset:hover,
-  .form-reset:focus {
+  .form-submit:hover,
+  .form-submit:focus {
     color: rgb(11, 240, 145);
     background-color: rgb(9, 9, 100);
   }
