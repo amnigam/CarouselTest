@@ -3,9 +3,11 @@ html
     head
         title Form Data Page
         link(rel="stylesheet" href="/formpage.css")
+        link(rel="stylesheet" href="/style.css")
         script(src='formJS.js' defer)
     head 
-    body 
+    body
+        include _header.pug 
         button(class='carousel-button prev' data-carousel-button="prev" onclick="plusCards(-1)" ) &#8656 
         button(class='carousel-button next' data-carousel-button="next" onclick="plusCards(1)") &#8658
         form(id='form' method='GET' action='/formdata')
@@ -24,8 +26,8 @@ html
                                     label.ques(for="no"+qindex) No 
                                     input.ques(type="radio", name="response"+index+qindex , id="no"+qindex , value="no")
                             .activities 
-                                |Associated Activities for Object #{index+1}
+                                .actheading Associated Activities for Object #{index+1}
                                 each act in b 
-                                    ul=act 
+                                    li=act 
             button(class="form-reset", type="reset", name="reset") Reset
             button(class="form-submit", type="submit", name="submit", disabled) Submit

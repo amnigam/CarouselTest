@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		title Secure by Design Portal ::: Deal Information
+		link (rel="stylesheet" hrefs"/formpage.css")
+	head
+	body
+		form(id='form' method='GET' action='/formdata')
+			div(class='dealcontainer')
+				div(class='card')
+				p.heading Deal Information
+				.question
+					.form-control
+						label Customer Name
+						input(type="text", name="customer" id="customer" value="") 
+						label Deal Name
+						input(type="text", name="deal", id="customer", value="")
+						label Deal Description
+						textarea (name="description", cols="30", rows="3")
+						label Deal Scope
+						textarea(name="scope", cols="30", rows="3")
+
+				.button
+						button(class="form-reset", type="reset", name="reset") Reset
+						button(class="form-submit", type="submit", name="submit") Submit
