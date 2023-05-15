@@ -20,7 +20,7 @@ body {
 	background-color: rgb(179, 242, 207);
 	border-radius: 20px;
 	border: solid rgb(86, 139, 5);
-	max-width: 100px;
+	max-width: 115px;
 	text-align: center;
 }
 
@@ -40,13 +40,14 @@ ul {
 }
 
 .container {
-	/border: solid;/
+	/*border: solid;*/
 	text-align: center;
 	margin: auto; 
+	margin-top: 10px;
 	background-color: 
 	rgb(163, 163, 247); 
 	border-radius: 20px; 
-	max-width: 80%;
+	max-width: 85%;
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -132,7 +133,6 @@ ul {
 	color: black;
 	font-weight: bold;
 	padding: 0.5 rem;
-	border: solid black;
 	background-color: #05c46b;
 	cursor: pointer;
 }
