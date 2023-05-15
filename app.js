@@ -24,4 +24,14 @@ app.get('/formdata', (req, res) => {
         });
 })
 
+app.get('/dealinfo', (req, res) => {
+    // res.send(x); 
+    const page = x.data     // x.data is the array of Objects. 
+    res.render('dealinfo', {
+            // questions: page[0].question,
+            obj: page
+
+        });
+})
+
 module.exports = app;

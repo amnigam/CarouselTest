@@ -11,7 +11,7 @@ body {
 	border-radius: 20px;
 	text-align: left;
 	background-color: rgb(231, 231, 247);
-	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+	/*box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);*/
 }
 
 .response {
@@ -43,11 +43,11 @@ ul {
 	/*border: solid;*/
 	text-align: center;
 	margin: auto; 
-	margin-top: 10px;
-	background-color: 
-	rgb(163, 163, 247); 
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background-color: rgb(163, 163, 247); 
 	border-radius: 20px; 
-	max-width: 85%;
+	max-width: 80%;
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -59,9 +59,8 @@ ul {
 }*/
 
 .card {
-	display:none;
-	border: solid;
 	border-radius: 20px;
+	padding: 10px;
 }
 
 .heading {
@@ -73,12 +72,9 @@ ul {
 
 .carousel-button {
 	position: absolute;
-	z-index: 2;
-	background: none;
 	border: none;
 	font-size: 3rem;
-	top: 35%;
-	transform: translateY(-50%);
+	top: 40%;
 	color: rgba(255, 255, 255, .5);
 	cursor: pointer;
 	border-radius: .20rem;
@@ -111,11 +107,9 @@ ul {
 	border: 2px solid black;
 	border-radius: 10px;
 	text-align: center;
-	font-size: 1.5rem;
-	font-weight: bold;
-	padding: 0.5 rem;
+	font-size: 1.3rem;
 	cursor: pointer;
-	margin-top: 20px; margin-bottom: 10px;
+	margin-top: 5px; margin-bottom: 10px;
 	margin-right: 10px;
 }
 
@@ -129,18 +123,22 @@ ul {
 	border: 2px solid black; 
 	border-radius: 10px; 
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: black;
-	font-weight: bold;
-	padding: 0.5 rem;
 	background-color: #05c46b;
 	cursor: pointer;
+	margin-top: 5px; margin-bottom: 10px;
 }
 
 .form-submit:hover { 
 	color: rgb(255, 251, 251); 
 	background-color: rgb(15, 15, 140);
 }
+
+.form-submit:disabled {
+	color: rgb(3, 2, 0); 
+	background-color: rgb(192, 190, 190);
+} 
 
 .actheading {
 	font-weight: bold; 
@@ -165,10 +163,11 @@ ul {
 }
 
 .dealcontainer {
+	margin: auto;
+	margin-top: 15px;
 	max-width: 60%;
 	border: solid;
-	border-radius: 20px; 
-	margin: auto; 
+	border-radius: 20px;  
 	padding: 20px 20px; 
 	background-color: rgb(163, 163, 247); 
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);

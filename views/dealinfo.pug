@@ -2,9 +2,11 @@ doctype html
 html
 	head
 		title Secure by Design Portal ::: Deal Information
-		link (rel="stylesheet" hrefs"/formpage.css")
+		link(rel="stylesheet" href="/formpage.css")
+		link(rel="stylesheet" href="/style.css")
 	head
 	body
+		include _header.pug
 		form(id='form' method='GET' action='/formdata')
 			div(class='dealcontainer')
 				div(class='card')
@@ -16,7 +18,7 @@ html
 						label Deal Name
 						input(type="text", name="deal", id="customer", value="")
 						label Deal Description
-						textarea (name="description", cols="30", rows="3")
+						textarea(name="description", cols="30", rows="3")
 						label Deal Scope
 						textarea(name="scope", cols="30", rows="3")
 
