@@ -1,6 +1,8 @@
 const express = require('express'); 
 const path = require('path');
 const x = require('./utils/formData'); 
+const AppError = require('./utils/appError');
+const errHandler = require('./controller/errorController'); 
 
 const app = express();
 app.set('view engine', 'pug'); 
@@ -33,5 +35,11 @@ app.get('/dealinfo', (req, res) => {
 
         });
 })
+
+app.all('*', (req,res,next) => {
+    next(new AppError('No such route exists',404));     // Passing Error inside NEXT. Call to our custom Error class constructor.
+})
+
+app.use(errHandler); 
 
 module.exports = app;
