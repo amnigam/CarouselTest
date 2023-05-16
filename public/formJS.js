@@ -29,6 +29,19 @@ function showCards(n) {
     };
 }
 
+function validate() {
+    let resp = document.querySelectorAll(".response"); 
+    let unfilled = false;
+    resp.forEach( (e) => {
+        let x = e.querySelectorAll('input'); 
+        x.forEach( (el) => {
+            if (el.value.length == 0) {
+                alert('Unfilled Boxes. All Radio Buttons are mandatory. Kindly Fill All!');
+            }
+        })
+    })
+}
+
 // Watching for Events - Debugging Helpers!
 document.addEventListener('DOMContentLoaded', e => {
     console.log('DOM Content Loaded Event fired'); 

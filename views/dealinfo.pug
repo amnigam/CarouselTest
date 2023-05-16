@@ -1,32 +1,30 @@
 doctype html
 html
 	head
-		title Secure by Design Portal ::: Deal Information
+		title Capturing Deal Information
 		link(rel="stylesheet" href="/formpage.css")
 		link(rel="stylesheet" href="/style.css")
-	head
 	body
 		include _header.pug
-		form(id='form' method='GET' action='/formdata' class='details')
-				p.heading Deal Information
-					div(class='dealcontainer')
-						div(class='input-container') 
-						input(placeholder="Customer Name" type="text", name="customer" id="customer" value="") 
-						div(class='input-container')
-						input(placeholder="Deal Name" type="text", name="dealname", id="dealname", value="")
-						div(class='input-container')
-						input(placeholder="Deal ID" type="text", name="deal_id", id="deal_id", value="")
-						div(class='input-container')
-						input(placeholder="SbD ID" type="text", name="sbd_id", id="sbd_id", value="")
-						div(class='input-container')
-						input(placeholder="User Name" type="text", name="username", id="username", value="")
-						div(class='input-container')
-						textarea(placeholder="Deal Description" name="description", cols="30", rows="3")
-						div(class='input-container')
-						textarea(placeholder="Deal Scope" name="scope", cols="30", rows="3")
-						div(class='input-container')
-						textarea(placeholder="Notes" name="notes", cols="30", rows="3")
-
-				.button
-						button(class="form-reset", type="reset", name="reset") Reset
-						button(class="form-submit", type="submit", name="submit") Submit
+		form(id='form' method='POST' action='/formdata' class='details')
+			p.heading Deal Information
+			div(class='dealcontainer')
+				div(class='input-container')
+					//- label(for="customer") Customer
+					input.flexItem(placeholder="Customer Name" type="text", name="customer" id="customer")
+					//- label(for="dealname") Deal Name	
+					input.flexItem(placeholder="Deal ID" type="text", name="deal_id", id="deal_id")
+					input.flexItem(placeholder="Deal Name" type="text", name="dealname", id="dealname")
+				div(class='input-container')
+					input.flexItem(placeholder="SbD ID" type="text", name="sbd_id", id="sbd_id")
+					input.flexItem(placeholder="User Email", type="email", name="email", id="email")
+					input.flexItem(placeholder="User Name" type="text", name="username", id="username")
+				div(class='big-text')
+					textarea(placeholder="Deal Description" name="description", cols="30", rows="3")
+				div(class='big=text')
+					textarea(placeholder="Deal Scope" name="scope", cols="30", rows="3")
+				div(class='big-text')
+					textarea(placeholder="Notes" name="notes", cols="30", rows="3")
+			.button
+					button(class="form-reset", type="reset", name="reset") Reset
+					button(class="form-submit", type="submit", name="submit") Submit
