@@ -147,7 +147,7 @@ ul {
 	font-size: 95%;
 }
 
-.form-control {
+/*.form-control {
 	text-align: left; 
 	margin-bottom: 10px; 
 	display: block;
@@ -171,4 +171,42 @@ ul {
 	padding: 20px 20px; 
 	background-color: rgb(163, 163, 247); 
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}*/
+
+.dealcontainer {
+	font-family: "Roboto", arial, sans-serif;
+	color: #fefefe;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(254, 254, 254);
+	border-radius: 10px 10px 10px 10px;
+	background-image: -moz-linear-gradient( -90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+	width: 90%;
+	min-width: 400px;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+.dealcontainer .input-container {
+	margin: 10px;
+}
+
+.dealcontainer input,
+.dealcontainer textarea
+{
+		font-weight: 700;
+		font-size: 0.9em;
+		padding: 10px;
+		border-width: 2px;
+		border-color: rgba(5, 0, 0, 0.3);
+		border-style: solid;
+		border-radius: 20px;
+}
+
+.row1 {
+	width: 30%;
 }
