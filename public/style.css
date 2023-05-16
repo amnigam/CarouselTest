@@ -13,7 +13,7 @@ body {
     position:relative; 
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: rgb(141, 11, 167);
     color: white;
 }
 
@@ -42,5 +42,5 @@ body {
 }
 
 .navbar-links li:hover {
-    background-color: #555555;
+    background-color: rgb(154, 106, 163);
 }

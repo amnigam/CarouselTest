@@ -7,20 +7,25 @@ html
 	head
 	body
 		include _header.pug
-		form(id='form' method='GET' action='/formdata')
-			div(class='dealcontainer')
-				div(class='card')
+		form(id='form' method='GET' action='/formdata' class='details')
 				p.heading Deal Information
-				.question
-					.form-control
-						label Customer Name
-						input(type="text", name="customer" id="customer" value="") 
-						label Deal Name
-						input(type="text", name="deal", id="customer", value="")
-						label Deal Description
-						textarea(name="description", cols="30", rows="3")
-						label Deal Scope
-						textarea(name="scope", cols="30", rows="3")
+					div(class='dealcontainer')
+						div(class='input-container') 
+						input(placeholder="Customer Name" type="text", name="customer" id="customer" value="") 
+						div(class='input-container')
+						input(placeholder="Deal Name" type="text", name="dealname", id="dealname", value="")
+						div(class='input-container')
+						input(placeholder="Deal ID" type="text", name="deal_id", id="deal_id", value="")
+						div(class='input-container')
+						input(placeholder="SbD ID" type="text", name="sbd_id", id="sbd_id", value="")
+						div(class='input-container')
+						input(placeholder="User Name" type="text", name="username", id="username", value="")
+						div(class='input-container')
+						textarea(placeholder="Deal Description" name="description", cols="30", rows="3")
+						div(class='input-container')
+						textarea(placeholder="Deal Scope" name="scope", cols="30", rows="3")
+						div(class='input-container')
+						textarea(placeholder="Notes" name="notes", cols="30", rows="3")
 
 				.button
 						button(class="form-reset", type="reset", name="reset") Reset
