@@ -24,6 +24,8 @@ function showCards(n) {
     cards[cardIndex-1].style.display = 'block';
     if (cardIndex == cards.length) {
         formSubmit.removeAttribute('disabled'); 
+    } else {
+        formSubmit.setAttribute('disabled', true); 
     };
 }
 
