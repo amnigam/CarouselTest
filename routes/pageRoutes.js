@@ -3,8 +3,17 @@ const router = express.Router();
 const formController = require('./../controller/formController'); 
 const testFormController = require('./../controller/testFormController'); 
 
+let customAlphabet
+(async () => {
+    customAlphabet = (await import('nanoid')).customAlphabet;
+    console.log('NODEID imported!');
+})();
+
 router.get('/dealinfo', (req, res) => {
-    res.render('dealinfo'); 
+    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz1234567890-', 15); 
+    const sbdId = nanoid();
+    console.log(sbdId); 
+    res.render('dealinfo', { sbdid: sbdId}); 
 });
 
 router

@@ -7,7 +7,9 @@ html
 	body
 		include _header.pug
 		form(id='form' method='POST' action='/formdata' class='details')
-			p.heading Deal Information
+			.main-info 
+				p.heading Deal Information Page
+				p.sbdId SBD-ID #{sbdid}
 			div(class='dealcontainer')
 				div(class='input-container')
 					//- label(for="customer") Customer
@@ -16,7 +18,7 @@ html
 					input.flexItem(placeholder="Deal ID" type="text", name="deal_id", id="deal_id")
 					input.flexItem(placeholder="Deal Name" type="text", name="dealname", id="dealname")
 				div(class='input-container')
-					input.flexItem(placeholder="SbD ID" type="text", name="sbd_id", id="sbd_id")
+					input.flexItem(placeholder="Service Line" type="text", name="service_line", id="service_line")
 					input.flexItem(placeholder="User Email", type="email", name="email", id="email")
 					input.flexItem(placeholder="User Name" type="text", name="username", id="username")
 				div(class='big-text')

@@ -1,0 +1,28 @@
+[
+    {
+        "heading": "Screener Questions",
+        "imghref": "/dealinfo",
+        "imgLocation": "/icons/screener.png",
+        "description": "Set of questions to establish potential scope of critical cyber security controls in new deals/RFPs.",
+        "pagehref": "/dealinfo",
+        "linkDesc" : "Screener Questions"
+    },
+
+    {
+        "heading": "Analytics",
+        "imghref": "/analytics",
+        "imgLocation": "/icons/analytics.png",
+        "description": "Page that captures the details entered for various deals in which SBD has been implemented.",
+        "pagehref": "/analytics",
+        "linkDesc" : "Analytics Page"
+    },
+
+    {
+        "heading": "Reference Sources",
+        "imghref": "/reference",
+        "imgLocation": "/icons/reference.jpg",
+        "description": "Page which links to the shared repository and other SBD resources to help shape a better understanding on this initiative.",
+        "pagehref": "/reference",
+        "linkDesc" : "References Section"
+    }
+]
