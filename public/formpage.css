@@ -8,7 +8,6 @@ body {
 .question {
 	margin: 20px;
 	padding: 10px;
-	border-radius: 20px;
 	text-align: left;
 	background-color: rgb(231, 231, 247);
 	/*box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);*/
@@ -34,7 +33,6 @@ ul {
 	margin: 10px;
 	border: solid rgb(86, 139, 5);
 	padding: 10px;
-	border-radius: 20px;
 	padding-left: 20px;
 	background-color: rgb(238, 241, 195);
 }
@@ -199,15 +197,14 @@ ul {
 }
 
 .dealcontainer input,
-.dealcontainer textarea
+.dealcontainer textarea,
+.dealcontainer select
 {
 		font-weight: 700;
 		font-size: 0.9em;
 		padding: 10px;
 		border-width: 2px;
-		border-color: rgba(5, 0, 0, 0.3);
 		border-style: solid;
-		border-radius: 20px;
 }
 
 .flexItem {

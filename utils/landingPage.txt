@@ -20,7 +20,7 @@
     {
         "heading": "Reference Sources",
         "imghref": "/reference",
-        "imgLocation": "/icons/reference.jpg",
+        "imgLocation": "/icons/reference.png",
         "description": "Page which links to the shared repository and other SBD resources to help shape a better understanding on this initiative.",
         "pagehref": "/reference",
         "linkDesc" : "References Section"

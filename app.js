@@ -27,12 +27,13 @@ app.get('/formdata', pageRouter);
 app.post('/formdata', pageRouter); 
 app.get('/testformdata', pageRouter); 
 app.post('/testformdata',pageRouter); 
+app.get('/reference',pageRouter);
 app.get('/analytics', (req, res) => {
     res.send("Page under construction!");
 });
-app.get('/reference', ( req, res ) => {
+/*app.get('/reference', ( req, res ) => {
     res.send('Page under Construction!'); 
-});
+});*/
 
 app.all('*', (req,res,next) => {
     next(new AppError('No such route exists',404));     // Passing Error inside NEXT. Call to our custom Error class constructor.

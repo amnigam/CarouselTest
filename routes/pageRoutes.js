@@ -31,4 +31,8 @@ router
         testFormController.renderData
         );
 
+router.get('/reference', (req, res) => { 
+    res.render('reference');
+});
+
 module.exports = router; 

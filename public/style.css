@@ -70,7 +70,7 @@ body {
     font-size: .7rem;
     border-style: solid;
     text-align: center;
-    margin: 10px;
+    margin: 10px 20px 10px 20px;
     background-color: rgb(218, 218, 245);
 }
 
@@ -107,9 +107,18 @@ body {
 }
 
 .card-image > a > img:hover {
-    background-color: rgb(117, 112, 117);
+    transition: transform .2s;
+    transform: scale(1.1);
 }
 
 .card-link > a:hover {
-    background-color: rgb(56, 241, 66);;
+    background-color: rgb(156, 240, 160);
+}
+
+.reference-container {
+    background-color: rgb(221, 238, 208);
+    text-decoration: none;
+    margin-top: 20px;  
+    text-align: center;  
+    font-weight: bold;
 }
