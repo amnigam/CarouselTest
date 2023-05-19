@@ -27,7 +27,9 @@ app.get('/formdata', pageRouter);
 app.post('/formdata', pageRouter); 
 app.get('/testformdata', pageRouter); 
 app.post('/testformdata',pageRouter); 
-app.get('/reference',pageRouter);
+app.get('/reference', (req,res) => {
+    res.render('reference', { landingPage: JSON.parse(landingPageData)}); 
+});
 app.get('/analytics', (req, res) => {
     res.send("Page under construction!");
 });
