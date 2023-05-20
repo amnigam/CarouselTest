@@ -29,18 +29,21 @@ function showCards(n) {
     };
 }
 
-function validate() {
-    let resp = document.querySelectorAll(".response"); 
-    let unfilled = false;
-    resp.forEach( (e) => {
-        let x = e.querySelectorAll('input'); 
-        x.forEach( (el) => {
-            if (el.value.length == 0) {
-                alert('Unfilled Boxes. All Radio Buttons are mandatory. Kindly Fill All!');
-            }
-        })
-    })
-}
+// Added logic to ensure form can be navigated with the help of arrow keys.
+// document.addEventListener('keydown', (event)=> {
+//     switch (event.key) {
+//         case "ArrowLeft":
+//         case "ArrowDown":
+//             plusCards(-1);
+//             break;
+//         case "ArrowRight":
+//         case "ArrowUp":
+//             plusCards(1);
+//             break;
+//         default: 
+//             return;
+//     }
+// })
 
 // Watching for Events - Debugging Helpers!
 document.addEventListener('DOMContentLoaded', e => {

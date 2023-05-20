@@ -10,24 +10,29 @@ html
         include _header.pug 
         button(class='carousel-button prev' data-carousel-button="prev" onclick="plusCards(-1)" ) &#8656 
         button(class='carousel-button next' data-carousel-button="next" onclick="plusCards(1)") &#8658
-        form(id='form' method='POST' action='/testformdata' onsubmit="validate()")
+        form(id='form' method='POST' action='/testformdata')
             each i, index in obj
                 - let a = i.question 
                 - let b = i.activities
+                - let c = i.description
+                - let d = i.domain
                 div(class='container' data-carousel) 
                     div(class='card' data-index=index)
-                        p.heading Object No. #{index+1}
+                        p.heading #{index+1}. #{d}
+                        div.description #{c}
                         div.question 
                             each ques, qindex in a 
                                 ul= ques
                                 div.response
                                     label.ques(for='yes'+qindex) Yes
-                                    input.ques(type="radio", name="response"+index+qindex , id="yes"+qindex , value="yes", required)
+                                    input.ques(type="radio", name= d+qindex , id="yes"+qindex , value="yes", required)
                                     label.ques(for="no"+qindex) No 
-                                    input.ques(type="radio", name="response"+index+qindex , id="no"+qindex , value="no", required)
+                                    input.ques(type="radio", name= d+qindex , id="no"+qindex , value="no", required)
                             .activities 
                                 .actheading Associated Activities for Object #{index+1}
                                 each act in b 
                                     li=act 
+                        .progress 
+                            span #{index+1}/#{obj.length}
             button(class="form-reset", type="reset", name="reset") Reset
             button(class="form-submit", type="submit", name="submit", disabled) Submit

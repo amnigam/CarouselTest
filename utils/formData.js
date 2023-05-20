@@ -9,7 +9,9 @@ module.exports.data = [
             "Remediation",
             "Advisory",
             "Patching Governance"
-        ]
+        ],
+        description: "Management of patches for hardware and software components. Keep the systems updated to ensure that the attack surface is continuously reduced.",
+        domain: "Patch Management"
     },
     {
         question: [
@@ -22,7 +24,9 @@ module.exports.data = [
             "Advisory",
             "VM Governance",
             "Container Security"
-        ]
+        ],
+        description: "Continous monitoring and management of vulnerabilities from identification to remediation. End to end management of the VM process.",
+        domain: "Vulnerability Management"
     },
     {
         question: [
@@ -35,6 +39,8 @@ module.exports.data = [
             "Dynamic Application Security Testing",
             "Penetration Testing & Assessments",
             "Vulnerability Scanning"
-        ]
+        ],
+        description: "Keeping the applications secure by enforcing secure design, best practices & by performing necessary application testing like DAST, SAST etc.",
+        domain: "Application Security"
     }
 ]
