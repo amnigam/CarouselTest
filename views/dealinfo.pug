@@ -13,22 +13,22 @@ html
 			div(class='dealcontainer')
 				div(class='input-container')
 					//- label(for="customer") Customer
-					input.flexItem(placeholder="Customer Name" type="text", name="customer" id="customer")
+					input.flexItem(placeholder="Customer Name" type="text", name="customer", id="customer", required)
 					//- label(for="dealname") Deal Name	
 					input.flexItem(placeholder="Deal ID" type="text", name="deal_id", id="deal_id")
-					input.flexItem(placeholder="Deal Name" type="text", name="dealname", id="dealname")
+					input.flexItem(placeholder="Deal Name" type="text", name="dealname", id="dealname", required)
 				div(class='input-container')
-					select.flexItem(id="service_line")
-						option(disabled selected) Service Line
+					select.flexItem(id="service_line", required)
+						option(value="") Service Line
 						option(value="cis") CIS
 						option(value="sap") SAP
-					input.flexItem(placeholder="User Email", type="email", name="email", id="email")
+					input.flexItem(placeholder="User Email", type="email", name="email", id="email", required)
 					input.flexItem(placeholder="User Name" type="text", name="username", id="username")
 					input(type="hidden", name="sbdid", value= sbdid)
 				div(class='big-text')
 					textarea(placeholder="Deal Description" name="description", cols="62", rows="2")
 				div(class='big=text')
-					textarea(placeholder="Deal Scope" name="scope", cols="62", rows="2")
+					textarea(placeholder="Deal Scope" name="scope", cols="62", rows="2", required)
 				div(class='big-text')
 					textarea(placeholder="Notes" name="notes", cols="62", rows="2")
 			.button

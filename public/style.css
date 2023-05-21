@@ -122,3 +122,34 @@ body {
     text-align: center;  
     font-weight: bold;
 }
+
+table {
+    width: 45%;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: .9rem;
+}
+
+.table-heading > .item {
+    width: 40%;
+}
+
+.table-data > td > ul {
+    padding-left: 0px; 
+    margin: 0px; 
+}
+
+.submit-page-data-container {
+    margin: 30px; 
+    font-size: 1.1rem;
+    text-align: center;
+}

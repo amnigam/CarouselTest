@@ -10,7 +10,7 @@ let customAlphabet
 })();
 
 router.get('/dealinfo', (req, res) => {
-    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz1234567890-', 15); 
+    const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 15); 
     const sbdId = nanoid();
     console.log(sbdId); 
     res.render('dealinfo', { sbdid: sbdId}); 

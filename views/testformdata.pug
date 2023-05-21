@@ -1,0 +1,40 @@
+doctype html 
+html 
+    head
+        title Data Submission Overview 
+        link(rel="stylesheet" href="/style.css")
+    body 
+        include _header.pug
+        - let dealName = deal.dealname
+        - let sbdid = deal.sbdid 
+        - let dealScope = deal.scope 
+        - let custName = deal.customer 
+        - let email = deal.email 
+        .submit-page-data-container 
+            p.submit-page-data Kindly Review the key elements of the data before submission. 
+        table.data-review-table 
+            caption Data Summary
+            tr.table-heading 
+                th.item Item 
+                th.value Value 
+            tr.table-data 
+                td SBD-ID 
+                td= sbdid 
+            tr.table-data 
+                td Customer Name 
+                td= custName 
+            tr.table-data 
+                td Deal Name 
+                td= dealName 
+            tr.table-data 
+                td Deal Scope 
+                td= dealScope 
+            tr.table-data 
+                td Primary Email 
+                td= email 
+            tr.table-data 
+                td Security Domains in Scope 
+                td 
+                    each domain in scope 
+                        ul= domain
+

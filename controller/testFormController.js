@@ -6,6 +6,7 @@ let domainScopeResp = [];
 let domainTransformResp = []; 
 
 module.exports.buildData = (req, res, next) => {
+    finalObj = {};
     console.log(req.body); 
     console.log('Here is shared Data\n', d.dataObj)
     console.log("Domains: ", domains); 
@@ -21,25 +22,34 @@ module.exports.buildData = (req, res, next) => {
             domainTransformResp
         }
     }
-
-
-
     // finalObj = JSON.stringify(d.dataObj) + JSON.stringify(req.body);
     next();
 }
 
+let domainInScope;
 module.exports.renderData = (req, res, next) => {
-    // res.json( {
-    //     "deal data" : d.dataObj,
-    //     "response data" : JSON.stringify(finalObj)
-    // });
-
     // res.json(JSON.stringify(finalObj) );
-    res.json(finalObj); 
+    // res.json(finalObj); 
+    domainInScope = [];
+    finalObj.responseData.domainScopeResp.forEach( (e) => {
+        if (e[1] === "yes") {
+            domainInScope.push(e[0]);
+        };
+    });
+    console.log("In scope domains: ", domainInScope); 
+    console.log('From Req Body', finalObj.responseData.domainScopeResp);
+
+    res.render('testformdata', {
+        deal: finalObj.dealData,
+        scope: domainInScope
+    })
 }
 
 function parseFormResp (reqObj, domains) {
     const respEntries = Object.entries(reqObj);   // Gives the array of entries [key,value] for the Request Object. 
+    // Re-initialize our arrays back to blank. This prevents appending of in scope domains when user re-enters. 
+    domainScopeResp = [];
+    domainTransformResp = []; 
     domains.forEach( (el) => {
         respEntries.forEach( (e) => {
             // Extract last element to know whether it is 0 or 1. 
@@ -56,7 +66,7 @@ function parseFormResp (reqObj, domains) {
 };
 
 function parseDealData (dealObj) {
-    const tempObj = {...dealObj};
-    delete tempObj.submit;
+    const tempObj = {...dealObj};   // Use spread operator to create a shallow copy of the object. 
+    delete tempObj.submit;          // Remove the SUBMIT attribute from the object. 
     return tempObj;
 }
